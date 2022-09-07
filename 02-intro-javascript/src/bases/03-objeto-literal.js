@@ -12,8 +12,6 @@ const persona = {
     }
 };
 
-// console.table( persona );
-
 const persona2 = { ...persona };
 persona2.nombre = 'Peter';
 
