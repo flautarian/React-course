@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Title component tests should match with snapshot 1`] = `
+<div>
+  <h1
+    data-testid="test-title"
+  >
+    title
+  </h1>
+  <h2>
+    subtitulo no disponible
+  </h2>
+</div>
+`;
