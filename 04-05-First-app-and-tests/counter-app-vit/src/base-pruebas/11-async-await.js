@@ -14,9 +14,6 @@ export const getImagen = async() => {
         console.error(error);
         return 'No se encontro la imagen';
     }
-    
-    
-    
 }
 
  getImagen();
