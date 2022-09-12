@@ -1,14 +1,19 @@
 import { Fragment } from "react";
 import PropTypes from 'prop-types';
+import { render, screen } from '@testing-library/react'
 
-export const GifExpertItem = ({ gif }) => {
+export const GifExpertItem = ({ title, url }) => {
     return (
         <Fragment>
             <div className="card">
-                <img src={gif.url}></img>
-                <p><a href={gif.url}>{gif.title}</a></p>
+                <img src={url} alt={title}></img>
+                <p>{title}</p>
             </div>
         </Fragment>
     )
+}
 
+GifExpertItem.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired
 }

@@ -6,7 +6,6 @@ export const GifExpertApp = () => {
     const [categories, setCategories] = useState(['One Punch', 'One piece']);
 
     const onAddCategory = (value) => {
-        console.log(value);
         if (!!value && !categories.includes(value) )
             setCategories([value, ...categories]);
     }
@@ -23,8 +22,6 @@ export const GifExpertApp = () => {
                     <GifExpertCategoriesGrid key={category} category={ category }/>
                 );
             })}
-            
-            
         </Fragment>
     )
 }

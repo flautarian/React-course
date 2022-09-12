@@ -1,25 +1,29 @@
-import { useEffect, useState, Fragment } from "react";
+import { Fragment } from "react";
 import { GifExpertItem } from "./gif-expert-item";
-import { fillGifs } from "../helpers/get-gifs";
-import { useFetchGifs } from "../hooks/useFetchGifs";
+import { UseFetchGifs } from "../hooks/UseFetchGifs";
+import PropTypes from 'prop-types';
 
 export const GifExpertCategoriesGrid = ({ category }) => {
     
-    const { images, isLoading } = useFetchGifs({ category });
+    const { images, isLoading } = UseFetchGifs( category );
     
     return (
         <Fragment>
-            <h2>{category}</h2>
+            <h3>{category}</h3>
             {
-                 isLoading && ( <h2> Loading... </h2> )
+                 isLoading && ( <h2>Loading...</h2> )
             }
             <div className="card-grid">    
                 {images.map(image => {
                     return (
-                        <GifExpertItem key={image.id} gif={image} />
+                        <GifExpertItem key={image.id} {...image} />
                     );
                 })}
             </div>
         </Fragment>
     )
+}
+
+GifExpertCategoriesGrid.propTypes = {
+    category: PropTypes.string.isRequired
 }
