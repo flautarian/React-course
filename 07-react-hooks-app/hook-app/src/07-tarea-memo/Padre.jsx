@@ -1,5 +1,6 @@
 import { Hijo } from './Hijo'
 import { useCallback, useState } from 'react';
+import '../08-use-reducer/intro-reducer'
 
 export const Padre = () => {
 

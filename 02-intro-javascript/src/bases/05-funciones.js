@@ -8,9 +8,9 @@ const saludar2 = ( nombre ) => {
 const saludar3 = ( nombre ) => `Hola, ${ nombre }`;
 const saludar4 = () => `Hola Mundo`;
 
-console.log( saludar2('Vegeta') );
-console.log( saludar3('Goku') );
-console.log( saludar4() );
+//console.log( saludar2('Vegeta') );
+//console.log( saludar3('Goku') );
+//console.log( saludar4() );
 
 
 const getUser = () => ({
@@ -20,7 +20,7 @@ const getUser = () => ({
 
 
 const user = getUser();
-console.log(user);
+//console.log(user);
 
 // Test
 const getUsuarioActivo = ( nombre ) =>({
@@ -29,7 +29,7 @@ const getUsuarioActivo = ( nombre ) =>({
 })
 
 const usuarioActivo = getUsuarioActivo('Facundo');
-console.log( usuarioActivo );
+//console.log( usuarioActivo );
 
 
 

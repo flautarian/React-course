@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 
 export const ShowIncrement = memo(({ increment }) => {
 
-    console.log("recharged!");
+    //console.log("recharged!");
 
     return (
         <button className='btn btn-primary'

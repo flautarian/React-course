@@ -1,4 +1,4 @@
-console.log("Hello world!!!")
+//console.log("Hello world!!!")
 
 const dice = {
     faces: 20,
@@ -9,4 +9,4 @@ const dice = {
 }
 
 const diceResult =`${dice.getRandomValue()}`;
-console.log(diceResult);
+//console.log(diceResult);

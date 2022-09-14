@@ -2,7 +2,7 @@
 
 const personajes = ['Goku','Vegeta','Trunks'];
 const [ , , p3 ] = personajes;
-console.log( p3 );
+//console.log( p3 );
 
 
 const retornaArreglo = () =>{
@@ -10,7 +10,7 @@ const retornaArreglo = () =>{
 }
 
 const [ letras, numeros ] = retornaArreglo(); 
-console.log(letras, numeros);
+//console.log(letras, numeros);
 
 
 // Test
@@ -20,7 +20,7 @@ const useState = ( valor ) => {
 
 const [ nombre, setNombre ] = useState( 'Goku' );
 
-console.log( nombre );
+//console.log( nombre );
 setNombre();
 
 

@@ -20,7 +20,7 @@ const useContext = ({ clave, nombre, edad, rango = 'Capitan' }) => {
 
 const { nombreClave, anios, latlng: { lat, lng } } = useContext( persona );
 
-console.log(nombreClave, anios);
-console.log( lat, lng );
+//console.log(nombreClave, anios);
+//console.log( lat, lng );
 
 
