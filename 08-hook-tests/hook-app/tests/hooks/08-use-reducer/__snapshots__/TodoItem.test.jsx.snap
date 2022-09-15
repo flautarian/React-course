@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoItem test should match snapshot 1`] = `
+<div>
+  <li
+    class="list-group-item d-flex justify-content-between"
+  >
+    <span
+      class="align-self-center"
+    >
+      Todo Description
+    </span>
+    <div>
+      <button
+        class="btn btn-danger"
+      >
+        Delete
+      </button>
+      <button
+        class="btn btn-warning"
+      >
+        To do
+      </button>
+    </div>
+  </li>
+</div>
+`;

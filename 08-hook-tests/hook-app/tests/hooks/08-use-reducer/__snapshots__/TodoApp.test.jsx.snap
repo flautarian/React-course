@@ -1,0 +1,102 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TodoApp test should match snapshot 1`] = `
+<div>
+  <h2>
+    TodoApp (
+    2
+    )
+    <small>
+      Pendent: (
+      1
+      )
+    </small>
+  </h2>
+  <hr />
+  <div
+    class="row"
+  >
+    <div
+      class="col-7"
+    >
+      <ul
+        class="list-group"
+      >
+        <li
+          class="list-group-item d-flex justify-content-between"
+        >
+          <span
+            class="align-self-center"
+          >
+            desc1
+          </span>
+          <div>
+            <button
+              class="btn btn-danger"
+            >
+              Delete
+            </button>
+            <button
+              class="btn btn-warning"
+            >
+              To do
+            </button>
+          </div>
+        </li>
+        <li
+          class="list-group-item d-flex justify-content-between"
+        >
+          <span
+            class="align-self-center"
+          >
+            desc2
+          </span>
+          <div>
+            <button
+              class="btn btn-danger"
+            >
+              Delete
+            </button>
+            <button
+              class="btn btn-success"
+            >
+              Done
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div
+      class="col-5"
+    >
+      <h4>
+        Add todo Action:
+      </h4>
+      <hr />
+      <form>
+        <input
+          class="form-control"
+          name="desc"
+          placeholder="What to do?"
+          type="text"
+          value=""
+        />
+        Done:
+        <input
+          class="mt-2"
+          name="done"
+          type="checkbox"
+          value="false"
+        />
+        <br />
+        <button
+          class="btn btn-outline-primary mt-2"
+          type="submit"
+        >
+          Add Todo
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+`;
