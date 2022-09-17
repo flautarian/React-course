@@ -7,7 +7,7 @@ export const HeroCard = ({ id, superhero, publisher, alter_ego, first_appearance
   const heroImg = `/assets/heroes/${id}.jpg`;
 
   const CharacterByHero = ({ alter_ego, characters}) => {
-    return alter_ego === characters ? (<></>) : (<p>{characters}</p>);
+    return alter_ego === characters ? (<></>) : (<span>{characters}</span>);
   }
 
   return (

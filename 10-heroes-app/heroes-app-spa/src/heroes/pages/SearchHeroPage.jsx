@@ -15,7 +15,7 @@ export const SearchHeroPage = () => {
 
   const query = queryString.parse(location.search);
 
-  const showError  = (query.q.length > 0) && heroes.length === 0;
+  const showError  = (!!query.q && query.q.length > 0) && heroes.length === 0;
 
   const { form, onFormChange, formReset } = useForm({
     searchText: query.q,
@@ -24,13 +24,15 @@ export const SearchHeroPage = () => {
   const { searchText } = form;
 
   useEffect( () => {
-    if(query.q.length > 0)
+    if(!!query.q && query.q.length > 0)
       setHeroes(() => SearchHeroes(searchText));
   }, []);
 
 
   const submitSearch = (event) => {
     event.preventDefault();
+    if(searchText.length == 0)
+      return;
     navigate(`?q=${searchText}`);
     setHeroes(() => SearchHeroes(searchText));
   }
