@@ -47,7 +47,7 @@ export const SearchHeroPage = () => {
         <div className='col-5'>
           <h4>Searching...</h4>
           <hr />
-          <form onSubmit={submitSearch}>
+          <form onSubmit={submitSearch} aria-label="form">
             <input type="text"
               placeholder='Search a hero'
               className='form-control'
@@ -64,6 +64,7 @@ export const SearchHeroPage = () => {
           <h4>Results...</h4>
           <hr />
           <div className="alert alert-danger animate__animated animate__fadeIn"
+            aria-label="alert-danger"
             style={{ display: showError ? '' : 'none' }}>
             No hero with <b>{query.q}</b>
           </div>
