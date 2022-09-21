@@ -2,9 +2,13 @@ import React from 'react';
 import { Box } from '@mui/system';
 import { Drawer, Toolbar, Divider, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, Grid } from '@mui/material'
 import { TurnedInNot } from '@mui/icons-material'
+import { useSelector } from 'react-redux';
 
 
 export const Sidebar = ({ sidebarWidth }) => {
+
+    const { displayName } = useSelector(state => state.auth);
+
     return (
         <Box
             component='nav'
@@ -20,7 +24,7 @@ export const Sidebar = ({ sidebarWidth }) => {
                 }}>
 
                 <Toolbar>
-                    <Typography variant='h6' noWrap component='div'>Facundo Giacconi</Typography>
+                    <Typography variant='h6' noWrap component='div'>{displayName}</Typography>
                 </Toolbar>
                 <Divider />
 
