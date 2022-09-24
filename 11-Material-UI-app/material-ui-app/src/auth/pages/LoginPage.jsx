@@ -5,7 +5,7 @@ import TextField from '@mui/material/TextField'
 import { Google } from '@mui/icons-material'
 import { useForm } from '../../hooks/useForm';
 import { AuthLayout } from '../layout/AuthLayout';
-import { checkingAuthentication, startGoogleSignIn, startLoginWithEmailPassword } from '../../store/auth/thunks';
+import { startGoogleSignIn, startLoginWithEmailPassword } from '../../store/auth/thunks';
 import { useDispatch, useSelector } from "react-redux";
 import { useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
