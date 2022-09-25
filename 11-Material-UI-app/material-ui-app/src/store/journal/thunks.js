@@ -13,8 +13,8 @@ export const startNewNote = () => {
         const { uid } = getState().auth;
 
         const newNote = {
-            title: 'an awesome title',
-            body: 'a new exiting journey',
+            title: '',
+            body: '',
             date: new Date().getTime(),
             imageUrls: []
         }

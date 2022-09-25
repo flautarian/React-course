@@ -17,7 +17,7 @@ export const LoginPage = () => {
     email: [(value) => value.includes('@'), 'Email must have @'],
     password: [(value) => value.length >= 6, 'password must have more than 6 characters'],
   }
-  
+
   const { email, password, emailValid, passwordValid, onFormChange, onResetForm } = useForm({
     email: 'Facundo@gmail.com',
     password: 'F1234'
@@ -29,7 +29,7 @@ export const LoginPage = () => {
 
   const navigate = useNavigate();
 
-  const isAuthenticating = useMemo( () => status === 'checking', [status]);
+  const isAuthenticating = useMemo(() => status === 'checking', [status]);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -43,12 +43,14 @@ export const LoginPage = () => {
   return (
 
     <AuthLayout title='Login'>
-      <form onSubmit={onSubmit}>
+      <form
+        onSubmit={onSubmit}
+        aria-label="submit-form">
         <Grid container>
           <Grid item xs={12} sx={{ mt: 2 }}>
             <TextField
               id="email-login-input"
-              label="Email"
+              label="email"
               type="email"
               name='email'
               value={email}
@@ -70,6 +72,9 @@ export const LoginPage = () => {
               fullWidth
               error={!!passwordValid}
               helperText={passwordValid}
+              inputProps={{
+                'data-testid': 'password'
+              }}
             />
           </Grid>
 
@@ -89,7 +94,12 @@ export const LoginPage = () => {
             </Grid>
 
             <Grid item xs={12} sm={6}>
-              <Button variant="contained" onClick={onGoogleSubmit} fullWidth sx={{ mt: 1, mb: 1 }} disabled={isAuthenticating}>
+              <Button
+                variant="contained"
+                onClick={onGoogleSubmit}
+                fullWidth sx={{ mt: 1, mb: 1 }}
+                disabled={isAuthenticating}
+                aria-label="google-btn">
                 <Google />
                 <Typography sx={{ ml: 1 }}>Google</Typography>
               </Button>
