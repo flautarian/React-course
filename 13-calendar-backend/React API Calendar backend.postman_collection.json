@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "c7c74854-f159-4c3f-a136-2ae5ec0d2910",
+		"name": "React API Calendar backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Event",
+			"item": [
+				{
+					"name": "get events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MzM0N2ZlNDY5NTYwMDM3ZGVhNDJhNDciLCJuYW1lIjoiRmFjdW5kbyIsImlhdCI6MTY2NDQwMTMwNywiZXhwIjoxNjY0NDA4NTA3fQ.I2u2kQ1hug_bL7QlpgS8bcMxBm5cF1gOYcq2poukPvY",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/api/event/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"event",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MzM0N2ZlNDY5NTYwMDM3ZGVhNDJhNDciLCJuYW1lIjoiRmFjdW5kbyIsImlhdCI6MTY2NDQ3Mzg5NCwiZXhwIjoxNjY0NDgxMDk0fQ.2GshWW-WIFtckNhzF5AajVFpC2FZXlgSFMUWMLz6LzA",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"the birthday\",\r\n    \"notes\": \"notes\",\r\n    \"start\": 100,\r\n    \"end\": 1000000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/event/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"event",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update event",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MzM1ZTMwZGI0NDBkMDI0Njk3YzI2NjYiLCJuYW1lIjoiRmFjdW5kbyIsImlhdCI6MTY2NDQ3NTkyMywiZXhwIjoxNjY0NDgzMTIzfQ.GA9NfckFhQJwPrVeIuhEJ4HN2Hq411J2fsW0nP7GG1g",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"the 4 may\",\r\n    \"notes\": \"notes\",\r\n    \"start\": \"2020-01-01T00:00:01.000Z\",\r\n    \"end\": \"2022-01-01T00:00:10.000Z\",\r\n    \"id\": \"6335e4ede71917b5aab4ac05\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4000/api/event/6335e4a2e71917b5aab4ac00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"event",
+								"6335e4a2e71917b5aab4ac00"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete event",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MzM0N2ZlNDY5NTYwMDM3ZGVhNDJhNDciLCJuYW1lIjoiRmFjdW5kbyIsImlhdCI6MTY2NDQwMTMwNywiZXhwIjoxNjY0NDA4NTA3fQ.I2u2kQ1hug_bL7QlpgS8bcMxBm5cF1gOYcq2poukPvY",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:4000/api/event/6335e4ede71917b5aab4ac05",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"event",
+								"6335e4ede71917b5aab4ac05"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "auth renew token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MzM0N2ZlNDY5NTYwMDM3ZGVhNDJhNDciLCJuYW1lIjoiRmFjdW5kbyIsImlhdCI6MTY2NDM5NDQ1MywiZXhwIjoxNjY0NDAxNjUzfQ.t-LLTygD25t46iUGhXFYt-mVyNuzQR3ZAY-To2Fy_ok",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/auth/renew",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"renew"
+					],
+					"query": [
+						{
+							"key": "x-token",
+							"value": "test",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Facundo\",\r\n    \"email\": \"test@google.es\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/new",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"test@google.es\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
